@@ -2,6 +2,7 @@
 
 bzminerCurVersion=10.0.4
 workDir=/hive/miners/bzminer/$bzminerCurVersion
+bzminerNewVersion=11.0.3
 
 zilWallet=""
 if echo "$1" | grep -q zil; then
@@ -48,6 +49,13 @@ fi
 #if ! miner stop ; then
 #	echo "Failed to stop miner, manual intervention necessary";
 #fi
+
+#install new version of bzminer
+
+echo cd /tmp
+echo wget https://github.com/bzminer/bzminer/releases/download/v$bzminerNewVersion/bzminer_v$bzminerNewVersion_linux.tar.gz
+echo tar -xvf bzminer_v$bzminerNewVersion_linux.tar.gz
+echo cp bzminer_v$bzminerNewVersion_linux/bzminer $workDir/
 
 #get params from config.txt
 cd $workDir
