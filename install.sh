@@ -101,3 +101,10 @@ echo "Protecting file from hiveos..."
 chmod -w config.txt
 chattr +i config.txt
 
+
+if [[ $2 != "y" ]]; then
+	read -p "Press enter to start the miner, Ctrl-C to cancel";
+fi
+
+miner start
+
