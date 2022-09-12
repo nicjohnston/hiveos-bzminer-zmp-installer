@@ -13,7 +13,7 @@ fi
 #is the executable installed and running
 checkInstalled=1
 if [ -f "/hive/miners/bzminer/$bzminerCurVersion/bzminer" ]; then
-	ps -ef | grep "[0-9] /hive/miners/bzminer/$bzminerCurVersion/bzminer";
+	ps -ef | grep -q "[0-9] /hive/miners/bzminer/$bzminerCurVersion/bzminer";
 	checkInstalled=$?;
 fi
 if [[ $checkInstalled == 1 ]]; then
@@ -21,7 +21,7 @@ if [[ $checkInstalled == 1 ]]; then
 fi
 
 #does the log file show the miner has started?
-grep "Working Directory: /hive/miners/bzminer/$bzminerCurVersion" /var/log/miner/bzminer/miner.log
+grep -q "Working Directory: /hive/miners/bzminer/$bzminerCurVersion" /var/log/miner/bzminer/miner.log
 checkRunning=$?
 if [[ $checkRunning == 1 ]]; then
 	echo "bzminer doesn't seem to be running";
