@@ -84,5 +84,12 @@ echo
 if [[ $2 != "y" ]]; then
 	read -p "Press enter to apply this change, Ctrl-C to cancel";
 fi
-echo "continue here"
+
+echo "Removing config.txt..."
+echo rm config.txt
+echo "Creating new config.txt..."
+echo mv config-new.txt config.txt
+echo "Protecting file from hiveos..."
+echo chmod -w config.txt
+echo chattr +i config.txt
 
