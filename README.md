@@ -1,0 +1,1 @@
+# hiveos-bzminer-zmp-installer
