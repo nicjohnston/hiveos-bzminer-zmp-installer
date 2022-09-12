@@ -2,7 +2,7 @@
 #Written by ApplicableRobot #9696
 #Limited support available, contact in Flexpool discord server
 
-bzminerCurVersion=10.0.4
+bzminerCurVersion=11.0.3
 workDir=/hive/miners/bzminer/$bzminerCurVersion
 bzminerNewVersion=11.0.3
 
@@ -52,10 +52,10 @@ if ! miner stop ; then
 	echo "Failed to stop miner, manual intervention necessary";
 fi
 
-#install new version of bzminer
-cd /tmp
-wget https://github.com/bzminer/bzminer/releases/download/v"$bzminerNewVersion"/bzminer_v"$bzminerNewVersion"_linux.tar.gz
-tar -C "$workDir"/ --strip-components 1 -xvf bzminer_v"$bzminerNewVersion"_linux.tar.gz bzminer_v"$bzminerNewVersion"_linux/bzminer
+##install new version of bzminer
+#cd /tmp
+#wget https://github.com/bzminer/bzminer/releases/download/v"$bzminerNewVersion"/bzminer_v"$bzminerNewVersion"_linux.tar.gz
+#tar -C "$workDir"/ --strip-components 1 -xvf bzminer_v"$bzminerNewVersion"_linux.tar.gz bzminer_v"$bzminerNewVersion"_linux/bzminer
 
 #get params from config.txt
 cd $workDir
