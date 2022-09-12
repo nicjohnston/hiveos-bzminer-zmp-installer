@@ -94,10 +94,10 @@ if [[ $2 != "y" ]]; then
 fi
 
 echo "Removing config.txt..."
-echo rm config.txt
+rm config.txt
 echo "Creating new config.txt..."
-echo mv config-new.txt config.txt
+mv config-new.txt config.txt
 echo "Protecting file from hiveos..."
-echo chmod -w config.txt
-echo chattr +i config.txt
+chmod -w config.txt
+chattr +i config.txt
 
