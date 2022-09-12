@@ -4,15 +4,13 @@ bzminerCurVersion=10.0.4
 workDir=/hive/miners/bzminer/$bzminerCurVersion
 
 zilWallet=""
-if ! echo "$1" | grep -q zil; then
-	zilWallet=$0;
+if echo "$1" | grep -q zil; then
+	zilWallet=$1;
 	echo "Zil address will be configured to: $zilWallet";
 else
 	echo "Please provide your zil address as the first argument";
 	exit 1;
 fi
-echo $zilWallet
-exit 1;
 
 ##check to make sure bzminer is running and installed
 ##is bzminer configed and started?
