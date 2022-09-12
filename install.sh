@@ -41,3 +41,23 @@ if ! miner stop ; then
 fi
 
 #get params from config.txt
+cd $workDir
+cp config.txt config-orig.txt # backup config for good measure
+#rm config.txt
+username=$(grep username config.txt | cut -d'"' -f4)
+
+#write base of config.txt
+cat << EOL >> config-new.txt
+{
+  "log_file": "/var/log/miner/bzminer/miner.log",
+  "verbosity": 2,
+  "stales_ok": true,
+  "http_password": "",
+  "http_port": 4014,
+  "http_address": "127.0.0.1",
+  "http_enabled": true,
+  "pool_configs": [
+    {
+EOL
+
+
