@@ -20,3 +20,7 @@ tar -C "$workDir"/ --strip-components 1 -xvf bzminer_v"$bzminerNewVersion"_linux
 if ! miner start ; then
 	echo "Failed to start miner, manual intervention necessary";
 fi
+
+if [[ $1 == "r" ]]; then
+	sreboot wakealarm
+fi
