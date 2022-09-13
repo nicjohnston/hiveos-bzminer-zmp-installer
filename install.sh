@@ -4,7 +4,7 @@
 
 bzminerCurVersion=11.0.3
 workDir=/hive/miners/bzminer/$bzminerCurVersion
-bzminerNewVersion=11.0.4b1
+bzminerNewVersion=11.0.4b2
 
 zilWallet=""
 if echo "$1" | grep -q zil; then

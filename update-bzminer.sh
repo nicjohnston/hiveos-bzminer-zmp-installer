@@ -4,7 +4,7 @@
 
 bzminerCurVersion=11.0.3
 workDir=/hive/miners/bzminer/$bzminerCurVersion
-bzminerNewVersion=11.0.4b1
+bzminerNewVersion=11.0.4b2
 
 if ! miner stop ; then
 	echo "Failed to stop miner, manual intervention necessary";
