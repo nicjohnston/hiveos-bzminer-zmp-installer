@@ -82,7 +82,7 @@ password=$(jq -r '.pool_configs[0].password' config.txt)
 #EOL
 
 #modify config.txt json
-cat config-orig.txt | jq '.pool_configs[.pool_configs| length] |= . + {"algorithm": "zil", "wallet": "'$zilWallet'", "username": "'$username'", "password": "'$password'", "lhr_only": false, "url": ["zmp://zil.flexpool.io"] } | .pool = [0,1]' > config-new.txt
+cat config-orig.txt | jq '.pool_configs[.pool_configs| length] |= . + {"algorithm": "zil", "wallet": "'$zilWallet'", "username": "'$username'", "password": "'$password'", "lhr_only": false, "url": ["zmp://zil.flexpool.io"] } | .pool = [0,1] | .+ {"log_file_verbosity":4}' > config-new.txt
 
 #inform user:
 echo "The following changes are about to be applied to config.txt:"
