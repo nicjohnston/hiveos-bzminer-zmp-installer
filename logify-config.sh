@@ -25,6 +25,11 @@ if [[ $1 != "y" ]]; then
 	read -p "Press enter to apply this change, Ctrl-C to cancel";
 fi
 
+echo "Removing config.txt..."
+rm config.txt
+echo "Creating new config.txt..."
+mv config-new.txt config.txt
+echo "Protecting file from hiveos..."
 protect-config.sh
 
 miner start
