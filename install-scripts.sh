@@ -11,5 +11,6 @@ cp install.sh /usr/local/bin/install-zmp-bzminer.sh
 cp protect-config.sh /usr/local/bin/protect-config.sh
 cp release-config.sh /usr/local/bin/release-config.sh
 cp update-bzminer.sh /usr/local/bin/update-bzminer.sh
+cp logify-config.sh /usr/local/bin/logify-config.sh
 cd /tmp/
 rm -R aprb-installer/
