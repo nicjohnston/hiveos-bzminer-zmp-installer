@@ -4,11 +4,11 @@
 
 bzminerCurVersion=11.0.3
 workDir=/hive/miners/bzminer/$bzminerCurVersion
-bzminerNewVersion=11.1.0
+bzminerNewVersion=$1
 
 zilWallet=""
-if echo "$1" | grep -q zil; then
-	zilWallet=$1;
+if echo "$2" | grep -q zil; then
+	zilWallet=$2;
 	echo "Zil address will be configured to: $zilWallet";
 else
 	echo "Please provide your zil address as the first argument";
@@ -91,7 +91,7 @@ diff -y config-orig.txt config-new.txt
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 echo
 
-if [[ $2 != "y" ]]; then
+if [[ $3 != "y" ]]; then
 	read -p "Press enter to apply this change, Ctrl-C to cancel";
 fi
 
@@ -104,7 +104,7 @@ chmod -w config.txt
 chattr +i config.txt
 
 
-if [[ $2 != "y" ]]; then
+if [[ $3 != "y" ]]; then
 	read -p "Press enter to start the miner, Ctrl-C to cancel";
 fi
 
