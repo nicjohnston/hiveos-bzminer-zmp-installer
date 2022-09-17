@@ -57,6 +57,7 @@ cd /tmp
 #wget https://github.com/bzminer/bzminer/releases/download/v"$bzminerNewVersion"/bzminer_v"$bzminerNewVersion"_linux.tar.gz
 wget https://bzminer.com/downloads/bzminer_v"$bzminerNewVersion"_linux.tar.gz
 tar -C "$workDir"/ --strip-components 1 -xvf bzminer_v"$bzminerNewVersion"_linux.tar.gz bzminer_v"$bzminerNewVersion"_linux/bzminer
+rm bzminer_v"$bzminerNewVersion"_linux.tar.gz
 
 #get params from config.txt
 cd $workDir
