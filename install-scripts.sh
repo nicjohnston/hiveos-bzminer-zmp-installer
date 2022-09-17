@@ -5,7 +5,7 @@
 cd /tmp/
 mkdir aprb-installer
 cd aprb-installer
-git clone https://github.com/nicjohnston/hiveos-bzminer-zmp-installer.git
+git clone -b share-issue-testing https://github.com/nicjohnston/hiveos-bzminer-zmp-installer.git
 cd hiveos-bzminer-zmp-installer
 cp install.sh /usr/local/bin/install-zmp-bzminer.sh
 cp protect-config.sh /usr/local/bin/protect-config.sh
