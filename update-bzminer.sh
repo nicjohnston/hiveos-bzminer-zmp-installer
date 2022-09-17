@@ -4,7 +4,7 @@
 
 bzminerCurVersion=11.0.3
 workDir=/hive/miners/bzminer/$bzminerCurVersion
-bzminerNewVersion=11.1.0
+bzminerNewVersion=$1
 
 if ! miner stop ; then
 	echo "Failed to stop miner, manual intervention necessary";
@@ -21,6 +21,6 @@ if ! miner start ; then
 	echo "Failed to start miner, manual intervention necessary";
 fi
 
-if [[ $1 == "r" ]]; then
+if [[ $2 == "r" ]]; then
 	sreboot wakealarm
 fi
